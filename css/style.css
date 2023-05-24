@@ -3,6 +3,9 @@
     margin: 0;
     box-sizing: border-box;
 }
+html{
+    scroll-behavior: smooth;
+}
 
 body{
     font-family: 'Open Sans', sans-serif;
@@ -13,17 +16,21 @@ nav{
     display: flex;
     justify-content: space-between;
     align-items: center;
-    background-color: hsla(180, 60%, 31%, 0.623);
-    height: 100px;
+    background-color: #2586869f;
+    height: 130px;
     padding: 30px 40px;
     width: 100%;
     
 }
 nav .logo{
-    color: #fff
+    color: #fff;
+}
+.logo img{
+    background-size: cover;
+    height: 130px;
 }
 .logo-span{
-    color: rgb(196, 101, 101);
+    color: #4B4453;
 }
 .lists {
     /* display: flex; */
@@ -32,11 +39,25 @@ nav .logo{
     text-decoration: none;
 }
 .lists a{
-
     text-decoration: none;
-    color: #fff;
+    color: #f3f3f3;
     padding: 20px;
+    display: inline-block;
 }
+.lists a:hover::after{
+    width: 100%;
+}
+
+.lists a::after{
+   content: '';
+   width: 0px;
+  height: 2px;
+  display: block;
+  background: #4B4453;
+  transition: 300ms
+}
+
+
 .center{
     display: flex;
     min-height: 568px;
@@ -46,7 +67,7 @@ nav .logo{
     color: aliceblue;
     /* clip-path: polygon(100% 0, 100% 0, 100% 23%, 100% 54%, 100% 86%, 63% 77%, 31% 82%, 0 100%, 0% 35%, 0 1%); */
 
-    clip-path: polygon(38% 0, 100% 0, 100% 0, 100% 54%, 100% 90%, 76% 79%, 42% 87%, 0 100%, 0% 35%, 0 0);
+    /* clip-path: polygon(38% 0, 100% 0, 100% 0, 100% 54%, 100% 90%, 76% 79%, 42% 87%, 0 100%, 0% 35%, 0 0); */
     
 }
 .center-left{
@@ -56,6 +77,10 @@ nav .logo{
     align-items: center;
     width: 50%;
 }
+.personal_name{
+    color: rgb(255, 183, 195);
+    
+}
 .center-right{
     display: flex;
     flex-direction: column;
@@ -64,76 +89,153 @@ nav .logo{
     width: 50%;
 
 }
-/* section about me */
+.center-right img{
+    background-size: cover;
+    height: 400px;
+    /* width: 300px; */
+
+}
+
+/*  about me */
 .about-me{
     display: flex;
     align-items: center;
     justify-content: space-between;
     min-height: 400px;
-    background-color: rgba(234, 145, 145, 0.281);
-    text-align: center;
+    background-color: #ea919148;
+    /* text-align: center; */
     padding: 30px;
-    clip-path: polygon(45% 10%, 81% 11%, 100% 0, 100% 54%, 100% 100%, 71% 100%, 41% 100%, 0 100%, 0% 35%, 0 0);
-
+    /* clip-path: polygon(45% 10%, 81% 11%, 100% 0, 100% 54%, 100% 100%, 71% 100%, 41% 100%, 0 100%, 0% 35%, 0 0); */
+    color: #4b44539a;
 }
 .about-me-left,
 .about-me-right{
     width: 50%;
 }
+#aboutme{
+    text-align: center;   
+}
+.about-me-right img{
+    box-shadow: rgba(0, 0, 0, 0.2) ;
+    background-size: cover;
+    height: 400px;
+    width: 400px;
+}
 .about-me h1{
+    text-align: center;
     font-size: 2rem;
     margin: 20px;
+    color: #4B4453;
+    
 }
 
-/* section skill */
+/* skill section */
+.container_skill{
+    text-align: center;
+}
+.container_skill h1{
+    margin: 1rem;
+    font-size: 3rem;
+    color: #4B4453;
+}
 .skill{
+    min-height: 400px;
+    /* background-color: rgb(144, 135, 135); */
     display: flex;
-    justify-content: space-around;
-    align-items: center;
-    background-color:rgba(37, 134, 134, 0.623);
-    height: 550px;
+    /* grid-template-columns: 100px 100px 100px;
+    grid-template-rows: 100px 100px 100px;
+    gap: 10px; */
+    flex-wrap: wrap;
+    align-items: center;   
+    justify-content: space-between;
 }
-.card{
-    border-radius: 15px;
-    height: 60%;
-    width: 20%;
-    box-shadow: rgba(0, 0, 0, 0.2) 0px 18px 50px -15px;
-    /* box-shadow: rgba(0, 0, 0, 0.25) 0px 25px 50px -12px; */
-    transition: ease-in-out;
+.programming_languages{
+    margin: 5px;
+    height: 270px;
+    width: 220px;
+    /* box-shadow: rgba(0, 0, 0, 0.2) 0px 18px 50px -15px; */
+    text-align: center;
 }
-.card:hover{
+.programming_languages img{
+
+    background-size: cover;
+    height: 130px;
+}
+.programming_languages H3{
+    color: #4b44539a;;
+}
+.programming_languages:hover{
     transform: scale(1.2);
     transition: all 0.3s ease-in-out;
 }
 
-.card-left{
-    /* background-color: aquamarine; */
+
+/* section project */
+.projects{
+    
 }
-.card-center{
-    /* background-color: rgba(172, 107, 172, 0.593); */
+.projects h1{
+    font-size: 2rem;
+    margin: 20px;
+    color: #4B4453;
+    text-align: center;
 }
-.card-right{
-    /* background-color: violet; */
+.project{
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    /* background-color:rgba(37, 134, 134, 0.623); */
+    height: 500px;
+    color: #282424;
 }
+.project .card{
+    border-radius: 15px;
+    min-height: 400px;
+    width: 25%;
+    box-shadow: rgba(0, 0, 0, 0.2) 0px 18px 50px -15px;
+    /* box-shadow: rgba(0, 0, 0, 0.25) 0px 25px 50px -12px; */
+    transition: ease-in-out;
+}
+
+.project .card:hover{
+    transform: scale(1.2);
+    transition: all 0.3s ease-in-out;
+}
+.project .card img{
+    background-size: cover;
+    height: 150px;
+}
+
+.project .card h2{
+    margin: 15px 0px;
+}
+
+.project .card-left,
+.project .card-center,
+.project .card-right{
+    padding: 1rem;
+}
+
+
 
 /* footer contact */
 .contact{
     display: flex;
     justify-content: space-around;
     align-items: center;
-    background-color: rgb(143, 188, 190);
+    background-color: rgba(234, 145, 145, 0.281);
     height: 320px;
 }
 .foot{
     height: 80%;
     width: 20%;
-    color: azure;
+    color: #4B4453;
     
 }
 .foot h3{
     font-size: 1.4rem;
     margin-bottom: 1.5rem;
-    color: rgb(81, 59, 59);
+    color: #4B4453;
 }
 .foot p{
     font-size: 1.2rem;
@@ -148,7 +250,7 @@ nav .logo{
     /* background-color: rgb(203, 180, 225); */
 }
 .footer-left a{
-    color: azure;
+    color: #4B4453;
     text-decoration: none;
 }
 .footer-right{
@@ -176,7 +278,7 @@ nav .logo{
     margin: 1rem;
     text-align: center;
     font-size: 1.2rem;
-    color: rgb(79, 78, 80);
+    color: #4B4453;;
 }
 
 
@@ -190,4 +292,20 @@ nav .logo{
 .reveal.active{
     transform: translateY(opx);
     opacity: 1;
+}
+
+
+.gotopbtn{
+    position: fixed;
+    width: 50px;
+    height: 50px;
+    background: linear-gradient(345deg, #ea919148 0%, #2586869f 60%);
+    bottom: 40px;
+    right: 50px;
+    border-radius: 50%;
+    text-decoration: none;
+    text-align: center;
+    line-height: 50px;
+    columns: white;
+    font-size: 22px;
 }
