@@ -57,7 +57,33 @@ nav .logo{
   transition: 300ms
 }
 
+@media screen and (min-width: 390px) and (max-width: 700px){
+    
+    .logo{
+        background-color: cover;
+    }
+    .logo img{
+        background-size: cover;
+        height: 70px;
+    }
+    .logo-span{
+        color: #4B4453;
+    }
+    nav{
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        background-color: #2586869f;
 
+    }
+    .lists a{
+        color: #f6f6f6;
+    }
+
+}
+
+
+/* home */
 .center{
     display: flex;
     min-height: 568px;
@@ -65,9 +91,6 @@ nav .logo{
     background: linear-gradient(345deg, #ea919148 0%, #2586869f 60%);
     font-size: 2rem;
     color: aliceblue;
-    /* clip-path: polygon(100% 0, 100% 0, 100% 23%, 100% 54%, 100% 86%, 63% 77%, 31% 82%, 0 100%, 0% 35%, 0 1%); */
-
-    /* clip-path: polygon(38% 0, 100% 0, 100% 0, 100% 54%, 100% 90%, 76% 79%, 42% 87%, 0 100%, 0% 35%, 0 0); */
     
 }
 .center-left{
@@ -78,9 +101,9 @@ nav .logo{
     width: 50%;
 }
 .personal_name{
-    color: rgb(255, 183, 195);
-    
+    color: rgb(255, 183, 195);  
 }
+
 .center-right{
     display: flex;
     flex-direction: column;
@@ -92,9 +115,21 @@ nav .logo{
 .center-right img{
     background-size: cover;
     height: 400px;
-    /* width: 300px; */
 
 }
+@media screen and (min-width: 390px) and (max-width: 700px){
+    .center{
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        min-height: 568px;
+    }
+    .center-right img{
+        height: 200px;
+    }
+}
+
 
 /*  about me */
 .about-me{
@@ -103,9 +138,7 @@ nav .logo{
     justify-content: space-between;
     min-height: 400px;
     background-color: #ea919148;
-    /* text-align: center; */
     padding: 30px;
-    /* clip-path: polygon(45% 10%, 81% 11%, 100% 0, 100% 54%, 100% 100%, 71% 100%, 41% 100%, 0 100%, 0% 35%, 0 0); */
     color: #4b44539a;
 }
 .about-me-left,
@@ -128,50 +161,112 @@ nav .logo{
     color: #4B4453;
     
 }
+@media screen and (min-width: 390px) and (max-width: 700px){
+    .about-me{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
 
+    }
+    .about-me-left
+    {
+    width: 99%;
+    }
+    .about-me-right img{
+        display: none;
+    }
+}
 /* skill section */
+
 .container_skill{
     text-align: center;
-}
+  }
 .container_skill h1{
     margin: 1rem;
-    font-size: 3rem;
+    font-size: 2rem;
     color: #4B4453;
-}
+  }
+  
+.skill-nav-bar {
+      margin-bottom: 50px;
+      margin-top: 20px;
+    }
+  
+.skill-nav-bar .skill-btn {
+      background-color: rgb(186, 141, 141);
+      outline: none;
+      border: none;
+      color: white;
+      font-size: 24px;
+      padding: 4px 8px 0px 8px;
+      padding: 2px 5px;
+      border-radius: 5px;
+      margin-right: 5px;
+      cursor: pointer;
+    }
+.skill-nav-bar .skill-btn:hover{
+        transform: scale(1);
+        transition: all 0.3s ease-in-out;
+    }
+  
+.skill-nav-bar .skill-btn:active {
+      border-bottom: 1px solid #4B4453;
+    }
+.skill-nav-bar .all {
+    border-bottom: 1px solid #4B4453;
+  }
+  
 .skill{
     min-height: 400px;
-    /* background-color: rgb(144, 135, 135); */
     display: flex;
-    /* grid-template-columns: 100px 100px 100px;
-    grid-template-rows: 100px 100px 100px;
-    gap: 10px; */
     flex-wrap: wrap;
     align-items: center;   
     justify-content: space-between;
-}
+  }
+  
 .programming_languages{
+    display: flex;
+    flex-direction: column;
     margin: 5px;
-    height: 270px;
-    width: 220px;
-    /* box-shadow: rgba(0, 0, 0, 0.2) 0px 18px 50px -15px; */
+    height: 240px;
+    width: 190px;
     text-align: center;
-}
+  }
 .programming_languages img{
-
     background-size: cover;
-    height: 130px;
-}
-.programming_languages H3{
-    color: #4b44539a;;
-}
+    height: 150px;
+  }
+.programming_languages p{
+    font-size: 20px;
+    color: #4b4453;
+  }
 .programming_languages:hover{
     transform: scale(1.2);
     transition: all 0.3s ease-in-out;
-}
+  }
+
+@media screen and (min-width: 390px) and (max-width: 700px){
+    .skill-nav-bar .skill-btn {
+        font-size: 24px;
+        padding: 2px 5px;
+        margin: 10px 10px;
+      } 
+      .programming_languages{
+        display: flex;
+        /* flex-direction: column; */
+        margin: 2px;
+        height: 50x;
+        width: 120px;
+        text-align: center;
+      }
+
+  }
 
 
 /* section project */
 .projects{
+    min-height: 600px;
     
 }
 .projects h1{
@@ -215,7 +310,37 @@ nav .logo{
 .project .card-right{
     padding: 1rem;
 }
+.card-btn{
+    margin: 10px;
+    background-color: #2ca5a59f;
+    border: none;
+    font-size: 1rem;
+    padding: 6px;
+    border-radius: 5px;
+}
+.card-btn:hover{
+    background-color: #1e8f8f9f;
 
+}
+@media screen and (min-width: 390px) and (max-width: 700px){
+    .project{
+        display: flex;
+        flex-direction: column;
+        display: inline;
+        margin-bottom:20px;
+    }
+    .project .card {
+        min-height: 300px;
+        width: 100%;
+    }
+    .project .card:hover{
+        transform: scale(1);
+        transition: all 0.3s ease-in-out;
+    }
+    .card-btn{
+        font-size: ;
+    }
+}
 
 
 /* footer contact */
@@ -225,6 +350,8 @@ nav .logo{
     align-items: center;
     background-color: rgba(234, 145, 145, 0.281);
     height: 320px;
+    padding: 0px 20px;
+    margin-top: 10px;
 }
 .foot{
     height: 80%;
@@ -244,15 +371,15 @@ nav .logo{
 }
 .footer-left,
 .footer-cente
-{
-    
+    { 
     width: 25%;
-    /* background-color: rgb(203, 180, 225); */
 }
+
 .footer-left a{
     color: #4B4453;
     text-decoration: none;
 }
+
 .footer-right{
     width: 25%;
 }
@@ -273,39 +400,15 @@ nav .logo{
     transition: all 0.3s ease-out;
     
 }
+@media screen and (min-width: 390px) and (max-width: 700px){
+
+}
 
 .copyright{
-    margin: 1rem;
+    padding-bottom: 20px;
     text-align: center;
     font-size: 1.2rem;
-    color: #4B4453;;
+    color: #4B4453;
+    background-color: rgba(234, 145, 145, 0.281);
 }
 
-
-
-.reveal{
-    position: relative;
-    transform: translateY(150px);
-    opacity: 0;
-    transition: all 2s ease;
-}
-.reveal.active{
-    transform: translateY(opx);
-    opacity: 1;
-}
-
-
-.gotopbtn{
-    position: fixed;
-    width: 50px;
-    height: 50px;
-    background: linear-gradient(345deg, #ea919148 0%, #2586869f 60%);
-    bottom: 40px;
-    right: 50px;
-    border-radius: 50%;
-    text-decoration: none;
-    text-align: center;
-    line-height: 50px;
-    columns: white;
-    font-size: 22px;
-}
